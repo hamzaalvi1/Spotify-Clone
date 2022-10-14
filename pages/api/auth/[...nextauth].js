@@ -11,7 +11,7 @@ const refreshAccessToken = async (token) => {
     return {
       ...token,
       accessToken: refreshedToken.body.access_token,
-      accessTokenExpires: Date.now() + refreshedToken.body.expires_in * 1000,
+      accessTokenExpires: refreshedToken.body.expires_in * 1000,
       refreshToken: refreshedToken.body.refresh_token ?? token.refreshToken,
     };
   } catch (err) {
@@ -43,7 +43,7 @@ export const authOptions = {
       if (account && user) {
         return {
           accessToken: account.access_token,
-          accessTokenExpires: Date.now() + account.expires_at * 1000,
+          accessTokenExpires: account.expires_at * 1000,
           refreshToken: account.refresh_token,
           user,
         };
@@ -59,12 +59,11 @@ export const authOptions = {
     },
 
     async session({ session, token }) {
-        console.log("token",token)
-        session.user = token.user
-        session.accessToken = token.accessToken
-        session.error = token.error
-        return session
-      },
+      session.user = token.user;
+      session.accessToken = token.accessToken;
+      session.error = token.error;
+      return session;
+    },
   },
 };
 export default NextAuth(authOptions);

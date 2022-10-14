@@ -2,7 +2,6 @@ import { getProviders, signIn, useSession } from "next-auth/react";
 import styles from "./Login.module.scss";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
 
 function Login({ providers }) {
   const { data: session } = useSession();
