@@ -9,6 +9,9 @@ const initialState = {
 export const getUserTracks = createAsyncThunk(
   "tracks/userTracks",
   async ({ accessToken, search }, {rejectWithValue}) => {
+    console.log(accessToken,"access Token")
+    console.log(search,"Search")
+
     spotifyApi.setAccessToken(accessToken);
     try{
         const response = await spotifyApi.searchTracks(search)
