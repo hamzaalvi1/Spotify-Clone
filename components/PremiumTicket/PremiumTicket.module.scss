@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+
+.premium {
+  max-width: calc(100% - 20px);
+  width: 100%;
+  max-height: 175px;
+  height: 100%;
+  background-image: linear-gradient(
+    to right top,
+    #528cfe,
+    #6183ff,
+    #7577ff,
+    #8b6aff,
+    #a258ff
+  );
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  padding: 0 15px;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+
+  h4 {
+    font-size: 16px;
+    color: $white;
+    font-weight: 600;
+    padding: 0 0 5px;
+  }
+  p {
+    font-size: 11px;
+    color: $white;
+  }
+  a {
+    font-size: 12px;
+    color: #fff;
+    padding: 10px 0;
+    svg {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
+}

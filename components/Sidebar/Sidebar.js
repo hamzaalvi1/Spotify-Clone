@@ -3,7 +3,7 @@ import { MdMusicNote, MdAlbum, MdHeadset } from "react-icons/md";
 import { HiHome, HiUser, HiClock, HiHeart, HiMusicNote } from "react-icons/hi";
 import { FaCompass } from "react-icons/fa";
 import MenuItems from "../MenuItems/MenuItems";
-
+import PremiumTicket from "../PremiumTicket/PremiumTicket";
 function Sidebar() {
   const menuList = [
     { title: "Home", path: "/", Icon: HiHome },
@@ -28,18 +28,18 @@ function Sidebar() {
       </div>
       {/* logo-end  */}
       {/* menu-items-start */}
-      <div className={styles.menu}>
-        <h6>Menu</h6>
-        <MenuItems menuList={menuList} />
-      </div>
+      <MenuItems menuList={menuList} titleName="Menu" />
       {/* menu-items-end */}
 
       {/* playlist-items-start */}
-      <div className={styles.menu}>
-        <h6>Playlist</h6>
-        <MenuItems menuList={playlist} />
-      </div>
+      <MenuItems menuList={playlist} titleName="Playlist" />
       {/* playlist-items-end */}
+
+      {/* premiumTicket-start */}
+      <PremiumTicket/>
+      {/* premiumTicket-end */}
+
+
     </div>
   );
 }

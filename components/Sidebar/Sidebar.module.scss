@@ -11,6 +11,7 @@
   flex-flow: column;
   align-items: flex-start;
   gap: 40px;
+  position: relative;
 
   .logo {
     display: flex;
@@ -55,14 +56,5 @@
       letter-spacing: -1.5px;
     }
   }
-  .menu{
-    align-self: flex-start;
-    padding: 0 5px;
-    h6{
-        color: $font-color;
-        font-size: 14px;
-        font-weight: 500;
-        margin: 0 0 10px 0;
-    }
-  }
+  
 }
