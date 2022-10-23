@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.songDetail {
+  height: 250px;
+  border-radius: 30px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right top,
+    #528cfe,
+    #6183ff,
+    #7577ff,
+    #8b6aff,
+    #a258ff
+  );
+}

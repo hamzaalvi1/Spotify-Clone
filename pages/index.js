@@ -1,7 +1,36 @@
 import Head from 'next/head'
 import styles from "../styles/Home.module.scss"
 import Searchbar from '../components/Searchbar/Searchbar'
+import Slider from "../components/Slider/Slider"
+import SongDetails from '../components/SongDetail/SongDetail';
 export default function Home() {
+  const songs = [
+    {
+      songName: "Hello",
+      artistName: "Adele",
+    },
+    {
+      songName: "Hello",
+      artistName: "Adele",
+    },
+    {
+      songName: "Hello",
+      artistName: "Adele",
+    },
+    {
+      songName: "Hello",
+      artistName: "Adele",
+    },
+    {
+      songName: "Hello",
+      artistName: "Adele",
+    },
+    {
+      songName: "Hello",
+      artistName: "Adele",
+    },
+   
+  ];
   return (
     <div className={styles.home}>
       <Head>
@@ -10,6 +39,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
        <Searchbar/>
+       <Slider songsList={songs} slides = {SongDetails} />
     </div>
   )
 }

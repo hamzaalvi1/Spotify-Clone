@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -234,4 +235,7 @@ input[type="number"] {
 ::-webkit-scrollbar-thumb:vertical {
   border-radius: 10px;
   background-color: #002F34;
+}
+.slider-swiper .swiper-wrapper{
+  width: 0;
 }
