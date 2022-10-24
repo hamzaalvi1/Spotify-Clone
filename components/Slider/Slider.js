@@ -4,21 +4,28 @@ import styles from "./Slider.module.scss";
 import { Navigation } from "swiper";
 import "swiper/css/navigation";
 
-function Slider({ songsList, slides: Slides }) {
+function Slider({
+  sliderList,
+  spaces,
+  slidePerView,
+  loop,
+  navigation,
+  slides: Slides,
+}) {
   return (
     <div className={styles.sliderWrapper}>
       <Swiper
-        spaceBetween={20}
-        slidesPerView={5}
-        loop={true}
+        spaceBetween={spaces}
+        slidesPerView={slidePerView}
+        loop={loop}
         className="slider-swiper"
-        navigation={false}
+        navigation={navigation}
         modules={[Navigation]}
       >
-        {songsList.map(({ songName, artistName }, idx) => {
+        {sliderList.map((slide, idx) => {
           return (
             <SwiperSlide key={idx}>
-              <Slides songName={songName} artistName={artistName} />
+              <Slides data={slide} />
             </SwiperSlide>
           );
         })}

@@ -239,3 +239,25 @@ input[type="number"] {
 .slider-swiper .swiper-wrapper{
   width: 0;
 }
+
+.slider-swiper .swiper-button-prev:after,
+.slider-swiper .swiper-button-next:after {
+
+  font-size: 12px;
+  color: $bg-black;
+  font-weight: 700;
+  background: $white;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.slider-swiper  .swiper-button-prev{
+  left: 0;
+}
+.slider-swiper  .swiper-button-next {
+right: 0;
+}
